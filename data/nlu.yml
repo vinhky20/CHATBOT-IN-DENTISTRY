@@ -1,0 +1,539 @@
+version: "2.0"
+nlu:
+- intent: request_schedule
+  examples: |
+   - đặt lịch
+   - tôi muốn đặt lịch
+   - tôi muốn đặt lịch khám bệnh
+   - muốn đặt lịch
+   - tôi cần đặt lịch cho dịch vụ khám
+   - tôi đặt lịch khám răng
+   - tôi cần đặt lịch khám
+   - tôi muốn đặt lịch khám răng
+   - muốn đặt lịch khám
+   - anh muốn đặt lịch
+   - chị muốn đặt lịch
+   - anh muốn đặt lịch khám răng
+   - chị muốn đặt lịch khám răng
+   - Tôi muốn hẹn khám
+   - Đặt lịch với nha sĩ A
+   - Cho tôi đặt lịch khám
+   - Tôi bị đau răng, cho tôi đặt lịch khám
+   - Tôi bị sưng nướu, giúp tôi đặt lịch đi
+   - Đặt lịch khám nha khoa
+   - Tôi sẽ đặt lịch khám
+   - Tôi đã đặt lịch cho ông rồi
+   - Tôi muốn đặt lịch khám răng
+   - Tôi muốn đặt lịch nhổ răng
+   - Tôi đã đặt lịch trước
+   - Đặt lịch thì làm sao ạ?
+   - Hẹn khám với nha sĩ được không ạ?
+
+- intent: day_booking
+  examples: |
+   - [12/02/2021](date)
+   - [24/07/2021](date)
+   - [3/9/2021](date)
+   - [13/9/2021](date)
+   - [12/12/2021](date)
+   - [24/03/2021](date)
+   - [5/6/2021](date)
+   - [1/10/2022](date)
+   - [12/02/2022](date)
+   - [4/08/2021](date)
+   - [2/2/2022](date)
+   - [1/1/2021](date)
+   - [4/06/2021](date)
+   - [10/08/2021](date)
+   - [11/08/2021](date)
+   - [12/08/2021](date)
+   - [13/08/2021](date)
+   - [14/08/2021](date)
+   - [15/08/2021](date)
+   - [16/08/2021](date)
+   - [17/08/2021](date)
+   - [18/08/2021](date)
+   - [19/08/2021](date)
+   - [20/08/2021](date)
+   - [21/08/2021](date)
+   - [22/08/2021](date)
+   - [23/08/2021](date)
+   - [24/08/2021](date)
+   - [26/08/2021](date)
+   - [27/08/2021](date)
+   - [28/08/2021](date)
+   - [29/08/2021](date)
+   - [30/08/2021](date)
+   - [31/08/2021](date)
+
+- intent: get_name
+  examples: |
+   - [Khưu Nguyễn Hoàng Nam](customer)
+   - [Phan Thị Huỳnh Như](customer)
+   - [Nguyễn Văn Quy](customer)
+   - [Lưu Tiến Đạo](customer)
+   - [minh tuyết](customer)
+   - [Hồng nhung](customer)
+   - [Nguyễn Văn A](customer)
+   - [Lê Thị Vân Anh](customer)
+   - [Nam](customer)
+   - [Khoa](customer)
+   - [Như Ý](customer)
+   - [Trần Công Án](customer)
+   - [trần công án](customer)
+   - [Nguyễn Thế Phi](customer)
+   - [Phạm Thế Phi](customer)
+   - [Thế Phi](customer)
+   - [Đoàn Huy](customer)
+   - [nam](customer)
+   - [Như Ý](customer)
+   - [Trần Nguyệt Minh](customer)
+   - [Nguyễn Thị kiều trà](customer)
+   - [Hạnh phúc](customer)
+   - [Thu Mai](customer)
+   - [Minh khoa](customer)
+   - [ánh](customer)
+   - [ánh tuyết](customer)
+
+- intent: get_phone
+  examples: |
+   - [012344567](phone)
+   - [0798412647](phone)
+   - [0126745388](phone)
+   - [028523958239](phone)
+   - [09824383822](phone)
+   - [0922132438](phone)
+   - [0126348278](phone)
+   - [0122838239](phone)
+   - [076328832](phone)
+   - [0932832239](phone)
+   - [0124842344](phone)
+   - [0798237274](phone)
+   - [12456985562](phone)
+   - [45621566845](phone)
+   - [76578921566](phone)
+   - [45225966556](phone)
+   - [12458752236](phone)
+   - [54456655](phone)
+   - [78945632](phone)
+   - [123654878](phone)
+   - [66215455](phone)
+   - [45698525](phone)
+   - [54566222](phone)
+   - [662233555](phone)
+   - [4785223](phone)
+   - [563236654](phone)
+
+- intent: get_email
+  examples: |
+   - [nam123@gmail.com](email)
+   - [huynguyen@gmail.com](email)
+   - [Test@gmail.com](email)
+   - [est@abc.com](email)
+   - [123@zyx.com](email)
+   - [nh@dd.com](email)
+   - [ninh372@gmail.com](email)
+   - [hn@gmail.com](email)
+   - [Tcan@gmail.com](email)
+   - [elcit@abc.com](email)
+   - [ctu@edu.com](email)
+   - [namvgbgbb1812834@student.ctu.edu.vn](email)
+   - [nadeb1812834@student.ctu.edu.vn](email)
+   - [namb1812834@student.ctu.edu.vn](email)
+   - [namb1812834@student.ctu.edu.vn](email)
+   - [namb1812834@student.ctu.edu.vn](email)
+   - [nagtg1812834@student.ctu.edu.vn](email)
+   - [nadwedb1812834@student.ctu.edu.vn](email)
+   - [namb1812834@student.ctu.edu.vn](email)
+   - [namb1812834@student.ctu.edu.vn](email)
+   - [namb1812834@student.ctu.edu.vn](email)
+   - [namb1812834@student.ctu.edu.vn](email) 
+   - [nambggtgtg1812834@student.ctu.edu.vn](email)
+   - [namvrvrb1812834@student.ctu.edu.vn](email)
+   - [nambgbbvfvfd1812834@student.ctu.edu.vn](email)
+   - [namb1812834@student.ctu.edu.vn](email)
+   - [nambbgdfd1812834@student.ctu.edu.vn](email)
+   - [namfrfw3e32b1812834@student.ctu.edu.vn](email)
+
+- intent: get_note
+  examples: |
+   - [không có](note)
+   - [ko có](note)
+   - [ko](note)
+   - [không có ghi chú](note)
+   - [gì cũng được](note)
+   - [có thể tôi đến trễ xíu](note)
+   - [cho tôi xin số bác sĩ luôn](note)
+- intent: get_gender
+  examples: |
+   - [anh](gender)
+   - [chị](gender)
+   - [bạn](gender)
+   - [em](gender)
+   - [cô](gender)
+   - [dì](gender)
+   - [chú](gender)
+   - [bác](gender)
+   - [ông nội](gender)
+- intent: book_intent
+  examples: |
+   - Đồng ý đặt lịch
+   - Bỏ đặt lịch
+- intent: affirm
+  examples: |
+   - có
+   - đúng rồi
+   - ye
+   - uh
+   - yeah
+   - um yes
+   - yes
+   - đúng vậy
+   - đúng
+   - chính xác
+   - tiếp tục
+   - đặt tiếp
+   - ok bạn
+- intent: deny
+  examples: |
+   - không
+   - no
+   - ko
+   - Không có nhu cầu
+- intent: stop
+  examples: |
+   - bạn không giúp gì được cho tôi
+   - thoát
+   - hủy
+   - dừng
+   - dừng lại
+   - stop
+   - hủy đặt lịch
+   - cancel
+   - tôi không muốn đặt lịch nữa
+   - dừng đặt lịch
+   - tôi muốn suy nghĩ lại
+   - thôi không khám nữa 
+- intent: greet
+  examples: |
+   - hey
+   - hello
+   - hi
+   - xin chào
+   - chào bạn
+   - chào buổi tối
+   - chào bot
+   - giúp mình với
+   - cho tôi hỏi
+   - alo
+   - chào buổi sáng
+   - ad ơi
+   - phòng khám ơi
+   - bạn ơi
+   - cháu ơi
+   - con ơi
+   - page ơi
+   - chị ơi
+   - cô ơi
+   - chào
+   - xin chào bạn
+   - xin chào ad
+   - anh ơi
+   - cho mình hỏi
+   - alo alo
+   - cho mình hỏi cái này
+   - bạn ơi bạn
+   - chào phòng khám
+   - chào ad
+   - mình xin chào bạn
+   - xin chào
+   - xin chào phòng khám
+   - chào ad nha
+   - cho mình hỏi là
+   - cho tôi hỏi
+   - alo alo
+   - chào bot nha
+   - bot ơi
+   - ad ơi cho mình hỏi
+- intent: goodbye
+  examples: |
+   - tạm biệt
+   - good bye
+   - xin tạm biệt
+   - gặp bạn sau nhé
+   - good night
+   - bye
+   - goodbye
+   - bye bye
+   - bai
+   - tạm biệt
+   - bye
+   - bye bye nha
+   - chào tạm biệt
+   - hẹn gặp lại nha
+   - gặp lại sau
+   - hẹn gặp vào ngày mai
+   - goodbye
+   - xin chào tạm biệt
+   - tạm biệt bạn nha
+   - bye ad
+   - bye bot
+- intent: ask_address
+  examples: |
+   - phòng khám của mình ở đâu vậy
+   - phòng khám ở đâu vậy
+   - phòng khám ở chỗ nào
+   - phòng khám ở đâu
+   - địa chỉ phòng khám là gì
+   - địa chỉ là gì
+   - địa chỉ ở đâu
+   - cho tôi xin địa chỉ
+   - chỗ mình ở đâu vậy
+   - địa chỉ chỗ mình là ở đâu
+   - cho xin địa chỉ
+   - địa chỉ mình ở đâu
+   - phòng khám ở đâu vậy
+   - địa chỉ phòng khám có xa thành phố không
+   - địa chỉ
+   - ở đâu vậy
+   - phòng khám ở nơi nào
+   - địa chỉ nha khoa mình là gì
+   - địa chỉ nha khoa mình có ở trong thành phố
+- intent: ask_worktime
+  examples: |
+   - lịch làm việc của phòng khám thế nào
+   - phòng khám làm việc những ngày nào
+   - thời gian làm việc sao
+   - giờ làm việc sao
+   - phòng khám mấy giờ mở cửa
+   - phòng khám mở cửa mấy giờ
+   - thứ 7 chủ nhật có làm không
+   - cho xin lịch làm việc
+   - giờ làm việc của phòng khám
+   - lịch phòng khám như nào
+   - phòng khám mình có lịch chủ nhật không
+   - lịch làm việc của nha khoa mình ra sao
+   - giờ làm việc của phòng khám như thế nào
+   - giờ mở cửa của phòng khám
+   - phòng khám đóng cửa vào lúc mấy giờ
+- intent: ask
+  examples: |
+   - tôi muốn được tư vấn
+   - tư vấn giùm tôi với
+   - tư vấn
+   - tôi cần tư vấn
+   - mình cần được tư vấn
+   - có thể giúp mình tư vấn được không
+   - tư vấn về dịch vụ cho mình
+   - bạn có tư vấn cho mình về dịch vụ được không
+   - cái này giá bao nhiêu
+   - cho tôi hỏi cái này 
+   - răng này giá sao vậy
+   - Giá tẩy răng bao nhiêu
+   - Chỉnh răng giá bao nhiêu
+   - Cho hỏi bây giờ là mấy giờ
+   - Bạn CÓ BỊ ĐAU RĂNG KHÔNG
+   - Cho tôi HỎI BẠN CÓ BỊ ĐAU RĂNG không
+ 
+
+- intent: ask_codauko
+  examples: |
+   - Niềng răng có đau không?
+   - Nghe nói niềng răng đau lắm hả?
+   - Niềng răng có ăn uống được gì không, nghe nói đau lắm?
+   - Trám răng có đau không
+   - Trồng răng có đau không
+   - niềng răng có khó chịu không
+   - nhổ răng khôn có đau lắm không ?
+   - rạch dẫn lưu áp xe đau lắm hả?
+   - răng bạn đã đỡ đau chưa
+   - vết thương có đau không
+   - Băng bó có đỡ đau không
+   - Bạn có cảm thấy đau không
+   - có thấy đau vết thương không
+   - Bạn còn đau không vậy
+   - hết nhức răng chưa
+   - còn đau răng không vậy 
+   - uống thuốc đã thấy giảm đau chưa
+   - trám răng có đau không vậy
+   - Bị trầy lợi chắc đau lắm nhỉ
+   - Bạn đỡ bị đau răng chưa
+   - Chắc bạn đau chân lắm hả
+   - Hy vọng bạn không bị đau đầu
+   - Cũng may là cậu không bị đau 
+   - Chắc ngày mai bạn sẽ hết đau thôi
+   - Vết thương sẽ đỡ đau sau một tuần 
+   - Bác sĩ ơi vết thương khi nào sẽ bớt đau
+   - tui đau răng quá bác sĩ
+   - Mẹ ơi con bị nhức răng quá 
+  
+- intent: ask_list_doctor
+  examples: |
+   - Danh sách nha sĩ
+   - ở đây có bao nhiêu nha sĩ phụ trách
+   - Có bao nhiêu nha sĩ
+   - Nha sĩ có bao nhiêu người?
+   - ở phòng khám có bao nhiêu nha sĩ
+   - Nha sĩ có bao nhiêu
+   - cho tôi xin danh sách nha sĩ của phòng khám
+   - danh sách các nha sĩ
+   - cho tôi xin danh sách các nha sĩ buổi sáng
+   - phòng khám mình có bao nhiêu nha sĩ làm việc
+   - vào buổi chiều có bao nhiêu nha sĩ làm việc
+   - danh sách các nha sĩ có mặt vào buổi chiều
+- intent: ask_doctor
+  examples: |
+   - Nha sĩ [Minh Huy, Vĩnh Kỳ, Hoàng Nam, Đoàn Huy, Kỳ Anh](doctor) là ai vậy?
+   - Nha sĩ [Minh Huy, Vĩnh Kỳ, Hoàng Nam, Đoàn Huy, Kỳ Anh](doctor) như thế nào
+   - Nha sĩ [Minh Huy, Vĩnh Kỳ, Hoàng Nam, Đoàn Huy, Kỳ Anh](doctor) có bằng cấp gì không?
+   - Bằng cấp của nha sĩ [Minh Huy, Vĩnh Kỳ, Hoàng Nam, Đoàn Huy, Kỳ Anh](doctor) là gì?
+- intent: ask_service
+  examples: |
+   - cho tôi hỏi về dịch vụ [niềng răng](service)
+   - cho tôi hỏi về dịch vụ [tẩy trắng răng](service)
+   - cho tôi hỏi về dịch vụ [nhổ răng](service)
+   - cho tôi hỏi về dịch vụ [chữa tuỷ răng](service)
+   - cho tôi hỏi về dịch vụ [lắp răng giả](service)
+   - cho tôi hỏi về dịch vụ [rạch dẫn lưu áp xe](service)
+   - cho tôi hỏi về dịch vụ [nhổ răng sữa](service)
+   - cho tôi hỏi về dịch vụ [cạo vôi răng](service)
+   - cho tôi hỏi về dịch vụ [trám răng](service)
+   - [niềng răng](service) là như thế nào
+   - [tẩy trắng răng](service) là như thế nào
+   - [nhổ răng](service) là như thế nào
+   - [chữa tuỷ răng](service) là như thế nào
+   - [lắp răng giả](service) là như thế nào
+   - [rạch dẫn lưu áp xe](service) là như thế nào
+   - [nhổ răng sữa](service) là như thế nào
+   - [cạo vôi răng](service) là như thế nào
+   - [trám răng](service) là như thế nào
+   - [niềng răng](service) là chúng ta sẽ làm gì
+   - [tẩy trắng răng](service) là chúng ta sẽ làm gì
+   - [nhổ răng](service) là chúng ta sẽ làm gì
+   - [chữa tuỷ răng](service) là chúng ta sẽ làm gì
+   - [lắp răng giả](service) là chúng ta sẽ làm gì
+   - [rạch dẫn lưu áp xe](service) là chúng ta sẽ làm gì
+   - [nhổ răng sữa](service) là chúng ta sẽ làm gì
+   - [cạo vôi răng](service) là chúng ta sẽ làm gì
+   - [trám răng](service) là chúng ta sẽ làm gì
+   - [niềng răng](service) là làm gì?
+   - [tẩy trắng răng](service) là làm gì?
+   - [nhổ răng](service) là làm gì?
+   - [chữa tuỷ răng](service) là làm gì?
+   - [lắp răng giả](service) là làm gì?
+   - [rạch dẫn lưu áp xe](service) là làm gì?
+   - [nhổ răng sữa](service) là làm gì?
+   - [cạo vôi răng](service) là làm gì?
+   - [trám răng](service) là làm gì?
+- intent: ask_price
+  examples: |
+   - giá [niềng răng](price) sao
+   - giá [tẩy trắng răng](price) sao
+   - giá [nhổ răng](price) sao
+   - giá [chữa tủy răng](price) sao
+   - giá [lắp răng giả](price) sao
+   - giá [rạch dẫn lưu áp xe](price) sao
+   - giá [nhổ răng sữa](price) sao
+   - giá [cạo vôi răng](price) sao
+   - giá [trám răng](price) sao
+   - giá [niềng răng](price) bao nhiêu
+   - giá [tẩy trắng răng](price) bao nhiêu
+   - giá [nhổ răng](price) bao nhiêu
+   - giá [chữa tủy răng](price) bao nhiêu
+   - giá [lắp răng giả](price) bao nhiêu
+   - giá [rạch dẫn lưu áp xe](price) bao nhiêu
+   - giá [nhổ răng sữa](price) bao nhiêu
+   - giá [cạo vôi răng](price) bao nhiêu
+   - giá [trám răng](price) bao nhiêu
+   - giá của [niềng răng](price) sao
+   - giá của [tẩy trắng răng](price) sao
+   - giá của [nhổ răng](price) sao
+   - [nhổ răng sữa](price) bao nhiêu
+   - [cạo vôi răng](price) bao nhiêu
+   - [trám răng](price) bao nhiêu
+   - [Niềng răng](price) bao nhiêu
+   - [Tẩy trắng răng](price) bao nhiêu
+   - [Nhổ răng](price) bao nhiêu
+   - [Chữa tuỷ răng](price) bao nhiêu
+   - [Lắp răng giả](price) bao nhiêu
+   - [Rạch dẫn lưu áp xe](price) bao nhiêu
+   - [Nhổ răng sữa](price) bao nhiêu
+   - [Cạo vôi răng](price) bao nhiêu
+   - [Trám răng](price) bao nhiêu
+   - giá của [niềng răng](price) bao nhiêu
+   - giá của [tẩy trắng răng](price) bao nhiêu
+   - giá của [nhổ răng](price) bao nhiêu
+   - giá của [nhổ răng sữa](price) bao nhiêu
+   - giá của [cạo vôi răng](price) bao nhiêu
+   - giá của [trám răng](price) bao nhiêu
+   - giá của [niềng răng](price) là bao nhiêu
+   - giá của [tẩy trắng răng](price) là bao nhiêu
+   - giá của [nhổ răng](price) là bao nhiêu
+   - giá của [chữa tủy răng](price) là bao nhiêu
+   - giá của [lắp răng giả](price) là bao nhiêu
+   - giá của [rạch dẫn lưu áp xe](price) là bao nhiêu
+   - giá của [nhổ răng sữa](price) là bao nhiêu
+   - giá của [cạo vôi răng](price) là bao nhiêu
+   - giá của [trám răng](price) là bao nhiêu
+- intent: ask_timetodo
+  examples: |
+   - [nhổ răng sữa](timetodo) mất khoảng bao lâu
+   - [cạo vôi răng](timetodo) mất khoảng bao lâu
+   - [trám răng](timetodo) mất khoảng bao lâu
+   - [Niềng răng](timetodo) mất khoảng bao lâu
+   - [Tẩy trắng răng](timetodo) mất khoảng bao lâu
+   - [Nhổ răng](timetodo) mất khoảng bao lâu
+   - [Chữa tuỷ răng](timetodo) mất khoảng bao lâu
+   - [Lắp răng giả](timetodo) mất khoảng bao lâu
+   - [Rạch dẫn lưu áp xe](timetodo) mất khoảng bao lâu
+   - [Nhổ răng sữa](timetodo) mất khoảng bao lâu
+   - [Cạo vôi răng](timetodo) mất khoảng bao lâu
+   - [Trám răng](timetodo) mất khoảng bao lâu
+   - thời gian [niềng răng](timetodo) là bao lâu
+   - thời gian [tẩy trắng răng](timetodo) là bao lâu
+   - thời gian [nhổ răng](timetodo) là bao lâu
+   - [nhổ răng sữa](timetodo) sẽ tốn bao nhiêu thời gian
+   - [cạo vôi răng](timetodo) sẽ tốn bao nhiêu thời gian
+   - [trám răng](timetodo) sẽ tốn bao nhiêu thời gian
+   - [Niềng răng](timetodo) sẽ tốn bao nhiêu thời gian
+   - [Tẩy trắng răng](timetodo) sẽ tốn bao nhiêu thời gian
+   - [Nhổ răng](timetodo) sẽ tốn bao nhiêu thời gian
+   - [Chữa tuỷ răng](timetodo) sẽ tốn bao nhiêu thời gian
+   - [Lắp răng giả](timetodo) sẽ tốn bao nhiêu thời gian
+   - [Rạch dẫn lưu áp xe](timetodo) sẽ tốn bao nhiêu thời gian
+   - [Nhổ răng sữa](timetodo) sẽ tốn bao nhiêu thời gian
+   - [Cạo vôi răng](timetodo) sẽ tốn bao nhiêu thời gian
+   - [Trám răng](timetodo) sẽ tốn bao nhiêu thời gian
+- intent: thank
+  examples: |
+   - thank you
+   - thank u
+   - cảm ơn
+   - xin cảm ơn
+   - cám ơn
+   - Cám ơn ad
+   - thanks
+   - Xin cảm ơn bạn
+   - Cảm ơn vì đã giúp tôi nhé
+   - Cảm ơn vì đã có mặt tại đây
+   - Cảm ơn bạn đã sử dụng dịch vụ bên tôi
+   - Cảm ơn mọi người đã đến nha khoa này
+   - Cảm ơn vì món quà của nha khoa
+   - Cảm ơn trời 
+   - Tạ ơn thần linh
+   - Tôi rất cảm ơn bạn
+   - Cảm ơn vì đã làm đẹp hàm răng cho tôi
+   - chân thành cảm ơn
+   - MÌNH BIẾT ƠN VÌ ĐIỀU ĐÓ
+   - Thật lòng cảm ơn
+   - Cảm kích bạn rất nhiều
+   - Cạm tạ tấm lòng của bạn
+   - Răng đẹp quá cảm ơn bác sĩ
+   - Cảm ơn bác sĩ đã giảm giá
+   - Cảm ơn bạn đã nhiệt tình giúp đỡ
+   - cảm ơn bác sĩ nhiều lắm ạ
+   - Không còn gì để nói lên tấm lòng cảm ơn của tôi
+
+
+
+

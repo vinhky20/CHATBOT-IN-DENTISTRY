@@ -1,0 +1,218 @@
+version: "2.0"
+intents:
+  - thank
+  - greet
+  - goodbye
+  - ask_address
+  - ask_worktime
+  - ask
+  - ask_codauko
+  - ask_list_doctor
+  - ask_doctor
+  - ask_service
+  - ask_price
+  - ask_timetodo
+  - ask_func_list
+  - ask_name
+  - request_schedule
+  - stop
+  - thankyou
+  - day_booking
+  - book_intent
+  - give_service
+  - give_dentist
+  - give_time
+  - get_name
+  - get_phone
+  - get_email
+  - get_gender
+  - get_note
+  - affirm
+  - deny
+  - book_note
+entities:
+  - service
+  - gender
+  - doctor  
+  - price
+  - timetodo
+  - dentist
+  - date
+  - time
+  - customer
+  - phone
+  - book_check
+  - email
+  - note
+  - note_check
+slots:
+  gender:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  service:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  dentist:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  customer:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  phone:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  email:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  note:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  date:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  time:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  book_check:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  requested_slot:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  doctor:
+    type: text
+    influence_conversation: false
+    auto_fill: true
+  price:
+    type: float
+    influence_conversation: false
+    auto_fill: true
+  timetodo:
+    type: text
+    influence_conversation: false
+    auto_fill: true
+  note_check:
+    type: text
+    influence_conversation: false
+    auto_fill: true
+responses:
+  utter_ask_service:
+  - text: "{gender} Vui lòng chọn dịch vụ muốn khám!"
+  utter_ask_dentist:
+  - text: "{gender}Vui lòng cho chọn nha sĩ muốn khám"
+  utter_ask_customer:
+  - text: Vui lòng cho em xin họ tên?
+  utter_ask_phone:
+  - text: "Số điện thoại của {gender} là?"
+  utter_ask_email:
+  - text: Vui lòng nhập email
+  utter_ask_date:
+  - text: "Cho em hỏi {gender} muốn chọn ngày nào ạ?"
+  utter_ask_note:
+  - text: "Cho em hỏi {gender} có thêm lưu ý gì không ạ?"
+  utter_submit:
+  - text: "Hoàn tất, hẹn gặp lại {gender}!"
+  utter_slots_values:
+  - text: |-
+      Em xin xác nhận lại thông tin {gender} đã đặt:
+       - Dịch vụ đã chọn: {service_book}
+       - Nha sĩ: {dentist_book}
+       - Họ tên: {customer_book}
+       - Số điện thoại: {phone_book}
+       - Email: {email_book}
+       - Ngày: {date_book}
+       - Giờ: {time_book}
+       - Ghi chú: {note_book}
+  utter_noworries:
+    - text: Cảm ơn Anh/Chị ạ!
+  utter_goodbye:
+    - text: Xin tạm biệt quý khách!
+  utter_ask_continue:
+    - text: "{gender} có muốn tiếp tục không ạ?"
+  utter_wrong_service:
+    - text: Phòng khám chưa có dịch vụ vừa rồi, anh chị vui lòng thử lại
+  utter_wrong_dentist:
+    - text: Nha sĩ anh chị vừa nhập không đúng, vui lòng nhập lại
+  utter_wrong_time:
+    - text: Giờ vừa rồi đã kín, vui lòng chọn giờ khác
+  utter_ask_address:
+  - text: Dạ địa chi của phòng khám là ở 999, đường 3/2, quận Ninh Kiều, thành phố Cần Thơ ạ.
+  utter_ask_worktime:
+  - text: Dạ phòng khám chúng em làm việc từ 8h đến 20h mỗi ngày kế cả thứ 7 và chủ nhật đấy ạ.
+  utter_thank:
+  - text: Dạ được phục vụ cho anh chị là niềm vui của chúng em ạ!
+  utter_ask_codauko:
+  - text: Sẽ không đau vì dịch vụ nha khoa ngày nay đã phát triển rất hoàn thiện. Với sự giúp đỡ của thuốc gây tê, bạn sẽ không phải quá lo lắng về vấn đề đau đớn.
+actions:
+- booking_form
+- rep_get_gender
+- rep_ask_service
+- rep_ask_price
+- rep_ask_timetodo
+- rep_ask_doctor
+- rep_ask_list_doctor
+- rep_greet
+- rep_goodbye
+- rep_ask
+- action_insert_val_form
+- action_submit_form
+- action_ask_service
+- action_ask_dentist
+- action_ask_time
+- action_service_dential
+- action_ask_note
+forms:
+  booking_form:
+    required_slots:
+      service:
+      - entity: service
+        type: from_entity
+      dentist:
+      - entity: dentist
+        type: from_entity
+      customer:
+      - entity: customer
+        type: from_entity
+      phone:
+      - entity: phone
+        type: from_entity
+      email:
+      - entity: email
+        type: from_entity
+      date:
+      - entity: date
+        type: from_entity
+      time:
+      - entity: time
+        type: from_entity
+      note:
+      - entity: note
+        type: from_entity
+e2e_actions: []
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+config:
+  store_entities_as_slots: true

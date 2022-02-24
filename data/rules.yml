@@ -1,0 +1,73 @@
+version: "2.0"
+rules:
+- rule: activate form
+  steps:
+    - intent: request_schedule
+    - action: booking_form
+    - active_loop: booking_form
+
+- rule: submit form
+  condition:
+  - active_loop: booking_form
+  steps:
+    - action: booking_form
+    - active_loop: null
+    - action: action_submit_form
+    - intent: book_intent
+    - action: action_insert_val_form
+
+- rule: Example of an unhappy path
+  condition:
+  - active_loop: booking_form
+  steps:
+  - action: booking_form
+  - active_loop: booking_form
+
+- rule: Goodbye
+  steps:
+  - intent: goodbye
+  - action: rep_goodbye
+- rule: thank
+  steps:
+  - intent: thank
+  - action: utter_thank
+- rule: Greet
+  steps:
+  - intent: greet
+  - action: rep_greet
+- rule: codauko
+  steps:
+  - intent: ask_codauko
+  - action: utter_ask_codauko
+- rule: Service
+  steps:
+  - intent: ask_service
+  - action: rep_ask_service
+- rule: ask
+  steps:
+  - intent: ask
+  - action: rep_ask
+- rule: Price
+  steps:
+  - intent: ask_price
+  - action: rep_ask_price
+- rule: Doctor
+  steps:
+  - intent: ask_doctor
+  - action: rep_ask_doctor
+- rule: List Doctor
+  steps:
+  - intent: ask_list_doctor
+  - action: rep_ask_list_doctor
+- rule: Timetodo
+  steps:
+  - intent: ask_timetodo
+  - action: rep_ask_timetodo
+- rule: worktime
+  steps:
+  - intent: ask_worktime
+  - action: utter_ask_worktime
+- rule: address
+  steps:
+  - intent: ask_address
+  - action: utter_ask_address

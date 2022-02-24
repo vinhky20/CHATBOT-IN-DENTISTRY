@@ -1,0 +1,138 @@
+version: "2.0"
+stories:
+
+
+  - story: stop form + continue
+    steps:
+      - intent: request_schedule
+      - action: booking_form
+      - active_loop: booking_form
+      - intent: stop
+      - action: utter_ask_continue
+      - intent: affirm
+      - action: booking_form
+      - active_loop: null
+      - action: action_submit_form
+      - intent: book_intent
+      - action: action_insert_val_form
+
+  - story: stop form + stop
+    steps:
+      - intent: request_schedule
+      - action: booking_form
+      - active_loop: booking_form
+      - intent: stop
+      - action: utter_ask_continue
+      - intent: deny
+      - action: utter_goodbye
+      - action: action_deactivate_loop
+      - active_loop: null
+
+
+  - story: "1"
+    steps:
+      - intent: greet
+      - action: rep_greet
+      - intent: get_gender
+      - action: rep_get_gender
+      - intent: ask
+      - action: rep_ask
+      - intent: ask_price
+      - action: rep_ask_price
+      - intent: ask_timetodo
+      - action: rep_ask_timetodo
+      - intent: ask_worktime
+      - action: utter_ask_worktime
+      - intent: ask_address
+      - action: utter_ask_address
+      - intent: ask_list_doctor
+      - action: rep_ask_list_doctor
+      - intent: goodbye
+      - action: rep_goodbye
+
+  - story: "2"
+    steps:
+      - intent: greet
+      - action: rep_greet
+      - intent: get_gender
+      - action: rep_get_gender
+      - intent: ask
+      - action: rep_ask
+      - intent: ask_timetodo
+      - action: rep_ask_timetodo
+      - intent: ask_price
+      - action: rep_ask_price
+      - intent: ask_address
+      - action: utter_ask_address
+      - intent: ask_worktime
+      - action: utter_ask_worktime
+      - intent: ask_list_doctor
+      - action: rep_ask_list_doctor
+      - intent: goodbye
+      - action: rep_goodbye
+
+  - story: "3"
+    steps:
+      - intent: greet
+      - action: rep_greet
+      - intent: get_gender
+      - action: rep_get_gender
+      - intent: ask
+      - action: rep_ask
+      - intent: ask_list_doctor
+      - action: rep_ask_list_doctor
+      - intent: ask_price
+      - action: rep_ask_price
+      - intent: ask_timetodo
+      - action: rep_ask_timetodo
+      - intent: ask_address
+      - action: utter_ask_address
+      - intent: ask_worktime
+      - action: utter_ask_worktime
+      - intent: goodbye
+      - action: rep_goodbye
+
+
+  - story: "4"
+    steps:
+      - intent: greet
+      - action: rep_greet
+      - intent: get_gender
+      - action: rep_get_gender
+      - intent: ask
+      - action: rep_ask
+      - intent: ask_address
+      - action: utter_ask_address
+      - intent: ask_price
+      - action: rep_ask_price
+      - intent: ask_timetodo
+      - action: rep_ask_timetodo
+      - intent: ask_worktime
+      - action: utter_ask_worktime
+      - intent: ask_list_doctor
+      - action: rep_ask_list_doctor
+      - intent: goodbye
+      - action: rep_goodbye
+
+
+  - story: "5"
+    steps:
+      - intent: greet
+      - action: rep_greet
+      - intent: get_gender
+      - action: rep_get_gender
+      - intent: ask
+      - action: rep_ask
+      - intent: ask_timetodo
+      - action: rep_ask_timetodo
+      - intent: ask_price
+      - action: rep_ask_price
+      - intent: ask_worktime
+      - action: utter_ask_worktime
+      - intent: ask_address
+      - action: utter_ask_address
+      - intent: ask_list_doctor
+      - action: rep_ask_list_doctor
+      - intent: goodbye
+      - action: rep_goodbye
+
